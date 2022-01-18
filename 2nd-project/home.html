@@ -73,10 +73,10 @@
 
             </div>
         </div>
-        <div class="absolute container mx-auto max-w-6xl bg-blue-50 z-50">
+        <div class="absolute container mx-auto max-w-6xl bg-blue-50 z-50  ">
 
-            <div class="hidden lg:hidden text-gray-600  w-full">
-                <ul class="lg:block items-start mobile-menu  pb-4">
+            <div class="hidden md::hidden text-gray-600  w-full" id="mobile-menu">
+                <ul class="md:block items-start  pb-4">
                     <li class="hover:bg-blue-500 hover:text-white px-4 py-3"><a class="" href="javascript:;">Home</a></li>
                     <li class="hover:bg-blue-500 hover:text-white px-4 py-3"><a href="javascript:;">About Me</a></li>
                     <li class="hover:bg-blue-500 hover:text-white px-4 py-3"><a href="javascript:;">Education</a></li>
@@ -90,23 +90,20 @@
     <!-- NavBar Section End -->
 
     <script>
-        const mobileButton = document.querySelector("#mobile-bar")
-        const mobileMenu = document.querySelectorAll(".mobile-menu")
-        mobileButton.style.transform = "rotate(0deg)"
+        const mobileButton = document.querySelector('#mobile-bar');
+        const mobileMenu = document.querySelector('#mobile-menu');
 
 
-        mobileButton.addEventListener("click", function(e) {
+        mobileButton.addEventListener('click', function(e) {
 
             if (e.target.style.transform == "rotate(90deg)") {
-                e.target.style.transform = "rotate(0deg)"
-
-
-
+                e.target.style.transform = "rotate(0deg)";
             } else {
-                e.target.style.transform = "rotate(90deg)"
-                console.log(e.target);
-            }
+                e.target.style.transform = "rotate(90deg)";
 
+            }
+            mobileMenu.classList.toggle('hidden')
+            mobileMenu.classList.toggle('block')
 
 
         });
