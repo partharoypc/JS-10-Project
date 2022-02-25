@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(50, 150, 175);
+    font-size: 3rem;
+    padding-bottom: 25px;
+    padding-top: 2rem;
+}
+
+.posts {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.post {
+    width: 22%;
+    padding: 1rem;
+    margin: 0.5remS;
+    box-shadow: 0 4px 8px 0 gray;
+    transition: all 0.4s;
+}
+
+h4 {
+    font-size: large;
+    color: rgb(50, 150, 175);
+    padding-bottom: 12px;
+}
+
+.post:hover {
+    box-shadow: 0 8px 16px 0 gray;
+}
+
+
+/* responsive parts starts here  */
+
+@media screen and (max-width: 992px) {
+    .post {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .post {
+        width: 100%;
+    }
+}
